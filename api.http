@@ -1,0 +1,42 @@
+### Para consultar todas las peliculas
+GET http://localhost:3000/peliculas
+
+### Para consultar por id
+GET http://localhost:3000/peliculas/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Para agregar una pelicula
+POST http://localhost:3000/peliculas
+content-type: application/json
+
+{
+    "id": "dcdd0fad-a94c-4810-8bbb-5f108d3b18c3",
+  "title": "TPrueba post",
+  "year": 2000,
+  "director": "Benjamin Blanco",
+  "duration": 150,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "genre": [
+    "Drama"
+  ],
+  "rate": 2.1
+}
+
+### Para actualizar una pelicula
+PUT http://localhost:3000/peliculas/dcdd0fad-a94c-4810-8bbb-5f108d3b18c3
+content-type: application/json
+
+{
+     "id": "dcdd0fad-a94c-4810-8bbb-5f108d3b18c3",
+  "title": "TPrueba put",
+  "year": 2000,
+  "director": "Benjamin Blanco",
+  "duration": 150,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "genre": [
+    "Drama"
+  ],
+  "rate": 6.6
+}
+
+### Para borrar una pelicula
+DELETE  http://localhost:3000/peliculas/dcdd0fad-a94c-4810-8bbb-5f108d3b18c3
